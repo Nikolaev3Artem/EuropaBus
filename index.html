@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/media.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,13 +15,52 @@
             <img src="static/images/logo.png" alt="">
         </div>
         <div class="nav" id="top">
-            <div class="nav-item"><img src="static/images/Vector.png" alt=""></div>
-            <div class="nav-item phone-number">+38 099 999 99 99</div>
-            <div class="nav-item"><button>ЗАМОВИТИ</button></div>
+            <div class="nav-item"><img src="static/images/Phone-icon.png" alt="Phone-icon"></div>
+            <h3>+38 099 999 99 99</h3>
+            <button onclick="show_popap('modal-1')" class="button-primary">ЗАМОВИТИ</button>
+            <div class="overlay" id="modal-1">
+                <div class="flex-popap">
+                    <div class="popap">
+                        <span class="close_popap">
+                            <img src="static/images/close.png" alt="">
+                        </span>
+                        <h2 class="popup-title">ВІДПРАВИТИ ЗАЯВКУ</h2>
+                        <p class="popup-desc">Залиште заявку і наш менеджер зв’яжеться з вами найближчим часом</p>
+                        <div class="data">
+                            <div class="user-data">
+                                <div>
+                                    <p>Звідки</p>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <p>Куди</p>
+                                    <input type="text">
+                                </div>
+
+                            </div>
+                            <div class="user-data">
+                                <div>
+                                    <p>Ім’я*</p>
+                                    <input type="text" required>
+                                </div>
+                                <div>
+                                    <p>Телефон*</p>
+                                    <input type="text" required>                        
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="button-popup">ЗАМОВИТИ</button>
+                        <p class="button-text">Натискаючи кнопку “Замовити”, 
+                            ви даєте згоду на обробку своїх персональних даних 
+                            і погоджуєтеся з Політикою конфіденційності.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <section class="top_section">
-        <img src="static/images/bg-top.png" alt="" style="width: 100%;">
+        <img src="static/images/bg-top.png" alt="" class="top_bg">
         <div class="ontop_of_image">
             <div class="image_block">
                 <div class="top_images">
@@ -44,30 +84,30 @@
             <div class="counties">
                 <div class="counties_top">
                     <div>
-                        <img src="static/images/Poland-icon.png" alt="">
+                        <img src="static/images/Poland-icon.png" class="country-icon" alt="">
                         <p>Польща</p>
                     </div>
                     <div>
-                        <img src="static/images/Niderland-icon.png" alt="">
+                        <img src="static/images/Niderland-icon.png" class="country-icon" alt="">
                         <p>Нідерланди</p>
                     </div>
                     <div>
-                        <img src="static/images/France-icon.png" alt="">
+                        <img src="static/images/France-icon.png" class="country-icon" alt="">
                         <p>Франція</p>
                     </div>
                 </div>
 
                 <div class="counties_bottom">
                     <div class="deutch">
-                        <img src="static/images/Deutch-icon.png" alt="">
+                        <img src="static/images/Deutch-icon.png" class="country-icon" alt="">
                         <p>Німеччина</p>
                     </div>
                     <div class="chech">
-                        <img src="static/images/Chech-icon.png" alt="">
+                        <img src="static/images/Chech-icon.png" class="country-icon" alt="">
                         <p>Чехія</p>
                     </div>
                     <div class="spain">
-                        <img src="static/images/Spain-icon.png" alt="">
+                        <img src="static/images/Spain-icon.png" class="country-icon" alt="">
                         <p>Іспанія</p>
                     </div>
                 </div>
@@ -79,11 +119,12 @@
 
             <div class="bus-img nav-item">
                 <img src="static/images/hero-bus.png" alt="">
-                <button>ЗАМОВИТИ ПОЇЗДКУ</button>
+                <button onclick="show_popap('modal-1')" class="button-primary">ЗАМОВИТИ ПОЇЗДКУ</button>
             </div>
 
         </div>    
     </section>
+
     <section class="second_section">
         <p class="second_section_header">міжнародні Пасажирські перевезення</p>
         <p class="second_section_desc">Завдяки досвіду та професійному підходу до роботи ми забезпечуємо найвищий рівень сервісу для наших клієнтів. Ми маємо сучасний автопарк, який включає в себе комфортабельні автобуси зі зручними сидіннями та підтримкою Wi-Fi. Наші водії мають багаторічний досвід та знання іноземних мов, що забезпечує високий рівень безпеки та комфорту під час поїздки.</p>
@@ -96,7 +137,35 @@
                 <div class="country-card-desc">
                     <img src="static/images/Poland-icon.png" alt="" class="country-card-icon">
                     <p class="country-card-text">Польща</p>
-                    <button class="country-card-button">ДІЗНАТИСЯ БІЛЬШЕ</button>
+                    <div class="overlay" id="modal-2">
+                        <div class="flex-popap">
+                            <div class="popap">
+                                <span class="close_popap">
+                                    <img src="static/images/close.png" alt="">
+                                </span>
+                                <div class="county-desc">
+                                    <img src="static/images/Poland-icon.png" alt="" class="country-card-icon">
+                                    <h2>Польща</h2>
+                                </div>
+
+                                <h3>Міста:</h3>
+                                <p class="county-p">Жешув, Тарнов, Краків, 
+                                    Катовіце, Ополе, Вроцлав, 
+                                    Познань, Замосць, Люблін, 
+                                    Варшава,Лодзь,Конін, Жешув, 
+                                    Гданськ та інші.
+                                </p>
+                                <h3>Документи:</h3>
+                                <p class="county-p">Біометричний паспорт, 
+                                    тест ПЛР або сертифікат вакцинації, 
+                                    віза країни, паспорт ЄС,
+                                     ВНЖ, ПМЖ.
+                                </p>
+                                <button class="button-popup">ЗАМОВИТИ ПОЇЗДКУ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="country-card-button" onclick="show_popap('modal-2')">ДІЗНАТИСЯ БІЛЬШЕ</button>
                 </div>
             </div>
             <div class="country-card">
@@ -104,7 +173,36 @@
                 <div class="country-card-desc">
                     <img src="static/images/Niderland-icon.png" alt="" class="country-card-icon">
                     <p class="country-card-text">Нідерланди</p>
-                    <button class="country-card-button">ДІЗНАТИСЯ БІЛЬШЕ</button>
+                    <div class="overlay" id="modal-3">
+                        <div class="flex-popap">
+                            <div class="popap">
+                                <span class="close_popap">
+                                    <img src="static/images/close.png" alt="">
+                                </span>
+                                <div class="county-desc">
+                                    <img src="static/images/Niderland-icon.png" alt="" class="country-card-icon">
+                                    <h2>Нідерланди</h2>
+                                </div>
+
+                                <h3>Міста:</h3>
+                                <p class="county-p">Амстердам, 
+                                    Гаага, Гронінген, 
+                                    Делфт, Лейден, Неймеген, 
+                                    Роттердам, Утрехт, 
+                                    Харлем, Харлінген, 
+                                    Хертогенбос та інші.
+                                </p>
+                                <h3>Документи:</h3>
+                                <p class="county-p">Біометричний паспорт, 
+                                    тест ПЛР або сертифікат вакцинації, 
+                                    віза країни, паспорт ЄС,
+                                     ВНЖ, ПМЖ.
+                                </p>
+                                <button class="button-popup">ЗАМОВИТИ ПОЇЗДКУ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="country-card-button" onclick="show_popap('modal-3')">ДІЗНАТИСЯ БІЛЬШЕ</button>
                 </div>
             </div>
             <div class="country-card">
@@ -112,7 +210,35 @@
                 <div class="country-card-desc">
                     <img src="static/images/France-icon.png" alt="" class="country-card-icon">
                     <p class="country-card-text">Франція</p>
-                    <button class="country-card-button">ДІЗНАТИСЯ БІЛЬШЕ</button>
+                    <div class="overlay" id="modal-4">
+                        <div class="flex-popap">
+                            <div class="popap">
+                                <span class="close_popap">
+                                    <img src="static/images/close.png" alt="">
+                                </span>
+                                <div class="county-desc">
+                                    <img src="static/images/France-icon.png" alt="" class="country-card-icon">
+                                    <h2>Франція</h2>
+                                </div>
+
+                                <h3>Міста:</h3>
+                                <p class="county-p">
+                                    Женева, Ліон, Безанкон, 
+                                    Валенс, Гренобль, Монтпельєр,
+                                    Марсель, Ніца, Париж, Діжон, 
+                                    Метс та інші.
+                                </p>
+                                <h3>Документи:</h3>
+                                <p class="county-p">Біометричний паспорт, 
+                                    тест ПЛР або сертифікат вакцинації, 
+                                    віза країни, паспорт ЄС,
+                                     ВНЖ, ПМЖ.
+                                </p>
+                                <button class="button-popup">ЗАМОВИТИ ПОЇЗДКУ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="country-card-button" onclick="show_popap('modal-4')">ДІЗНАТИСЯ БІЛЬШЕ</button>
                 </div>
             </div>
         </div>
@@ -122,7 +248,38 @@
                 <div class="country-card-desc">
                     <img src="static/images/Deutch-icon.png" alt="" class="country-card-icon">
                     <p class="country-card-text">Німеччина</p>
-                    <button class="country-card-button">ДІЗНАТИСЯ БІЛЬШЕ</button>
+                    <div class="overlay" id="modal-5">
+                        <div class="flex-popap">
+                            <div class="popap">
+                                <span class="close_popap">
+                                    <img src="static/images/close.png" alt="">
+                                </span>
+                                <div class="county-desc">
+                                    <img src="static/images/Deutch-icon.png" alt="" class="country-card-icon">
+                                    <h2>Німеччина</h2>
+                                </div>
+
+                                <h3>Міста:</h3>
+                                <p class="county-p">
+                                    Дрезден, Хемніц, Хоф, 
+                                    Байронт, Хельброн, Штутгарт,
+                                    Карлсруе, Мангейм, Франкфурт,
+                                    Дрезден, Цвіккау, Гера, Ерфурт,
+                                    Гота, Герінген, Грюнберг, 
+                                    Франкфурт, Берлін, Лейпціг,
+                                    Ганновер, Бремен, Гамбург та інші.
+                                </p>
+                                <h3>Документи:</h3>
+                                <p class="county-p">Біометричний паспорт, 
+                                    тест ПЛР або сертифікат вакцинації, 
+                                    віза країни, паспорт ЄС,
+                                     ВНЖ, ПМЖ.
+                                </p>
+                                <button class="button-popup">ЗАМОВИТИ ПОЇЗДКУ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="country-card-button" onclick="show_popap('modal-5')">ДІЗНАТИСЯ БІЛЬШЕ</button>
                 </div>
             </div>
             <div class="country-card">
@@ -130,7 +287,39 @@
                 <div class="country-card-desc">
                     <img src="static/images/Chech-icon.png" alt="" class="country-card-icon">
                     <p class="country-card-text">Чехія</p>
-                    <button class="country-card-button">ДІЗНАТИСЯ БІЛЬШЕ</button>
+                    <div class="overlay" id="modal-6">
+                        <div class="flex-popap">
+                            <div class="popap">
+                                <span class="close_popap">
+                                    <img src="static/images/close.png" alt="">
+                                </span>
+                                <div class="county-desc">
+                                    <img src="static/images/Chech-icon.png" alt="" class="country-card-icon">
+                                    <h2>Чехія</h2>
+                                </div>
+
+                                <h3>Міста:</h3>
+                                <p class="county-p">
+                                    Прага, Оломоуц, 
+                                    Брно, Їглава, Плзень,
+                                    Карлові Вари, Градец
+                                    Кралове, Фридек Мистек,
+                                    Острава, Опава, Злін,
+                                    Літомишль, Пардубице,
+                                    Млада Болеслав, Ліберець,
+                                    та інші
+                                </p>
+                                <h3>Документи:</h3>
+                                <p class="county-p">Біометричний паспорт, 
+                                    тест ПЛР або сертифікат вакцинації, 
+                                    віза країни, паспорт ЄС,
+                                     ВНЖ, ПМЖ.
+                                </p>
+                                <button class="button-popup">ЗАМОВИТИ ПОЇЗДКУ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="country-card-button" onclick="show_popap('modal-6')">ДІЗНАТИСЯ БІЛЬШЕ</button>
                 </div>
             </div>
             <div class="country-card">
@@ -138,7 +327,37 @@
                 <div class="country-card-desc">
                     <img src="static/images/Spain-icon.png" alt="" class="country-card-icon">
                     <p class="country-card-text">Іспанія</p>
-                    <button class="country-card-button">ДІЗНАТИСЯ БІЛЬШЕ</button>
+                    <div class="overlay" id="modal-7">
+                        <div class="flex-popap">
+                            <div class="popap">
+                                <span class="close_popap">
+                                    <img src="static/images/close.png" alt="">
+                                </span>
+                                <div class="county-desc">
+                                    <img src="static/images/Spain-icon.png" alt="" class="country-card-icon">
+                                    <h2>Іспанія</h2>
+                                </div>
+
+                                <h3>Міста:</h3>
+                                <p class="county-p">
+                                    Жерона, Барселона,
+                                    Тарагона, Кастельйон
+                                    де ла Плана, Валенсія,
+                                    Аліканте, Мурсія,
+                                    Леріда, Зарагоса,
+                                    Мадрид та інші.
+                                </p>
+                                <h3>Документи:</h3>
+                                <p class="county-p">Біометричний паспорт, 
+                                    тест ПЛР або сертифікат вакцинації, 
+                                    віза країни, паспорт ЄС,
+                                     ВНЖ, ПМЖ.
+                                </p>
+                                <button class="button-popup">ЗАМОВИТИ ПОЇЗДКУ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="country-card-button" onclick="show_popap('modal-7')">ДІЗНАТИСЯ БІЛЬШЕ</button>
                 </div>
             </div>
         </div>
@@ -295,7 +514,7 @@
             </div>
         </div>
         <div class="nav-item bus-img">
-            <button class="contacts-button">ЗАМОВИТИ ПОЇЗДКУ</button>
+            <button class="button-primary" onclick="show_popap('modal-1')">ЗАМОВИТИ ПОЇЗДКУ</button>
         </div>
     </section>
     
@@ -303,5 +522,7 @@
         <p>© EuropaBus 2023</p>
         <a href="#top"><img src="static/images/Footer-button.png" alt=""></a>
     </footer>
+    <script src="static/js/jquery-3.6.1.min.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>
