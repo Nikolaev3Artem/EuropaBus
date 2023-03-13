@@ -1,0 +1,190 @@
+@media(max-width:1024px){
+    .check-country_top, .check-country_bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    h2{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: center;
+        
+    }
+    h3{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        
+    }
+    .button-primary{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    .review-block{
+        width: 77%;
+    }
+    .counties_top div, .counties_bottom div{
+        width: 100px;
+    }
+}
+
+@media(max-width:769px){
+    .third_block-desc{
+        display: flex;
+        flex-direction: column;
+
+        background-image: url(../images/third-block-bg.png);
+        object-fit: cover;
+        height: fit-content;
+
+        padding: 8%;
+    }
+    .third_block{
+        background-image: none;
+    }
+    .other-reviews{
+        display: flex;
+        flex-direction: column;
+    }
+    .review-left, .review-middle, .review-right{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .how_we_work_top,.how_we_work_bottom{
+        margin: 0;
+        padding: 0;
+        margin-left: 35px;
+    }
+    .contacts-desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contacts-text{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    .contacts button{
+        margin: 40px 0px;
+    }
+
+    footer{
+        padding: 0px 10%;
+    }
+    .button-popup-country,
+    .button-popup{
+        width: 566px;
+    }
+
+    .button-popup{
+        margin-top: 30px;
+    }
+
+
+    .user-data-top p, .user-data-bottom p{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+    .button-text{
+        width: 500px;
+    }
+
+
+}
+
+@media(max-width:426px){
+    .counties{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .how_we_work_top, .how_we_work_bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    .top_phone-number{
+        display: none;
+    }
+
+    .gallery{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+    .gallery-top, .gallery-bottom{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .counties_top div p, .counties_bottom div p{
+        margin: 10px;
+    }
+    .counties_bottom{
+        margin-top: 20px;
+    }
+
+    .counties_top div, .counties_bottom div{
+        margin: 0px;
+    }
+    .gallery-img-top{
+        width:85%;
+        margin: 10px;
+    }
+
+    .country-card-icon, .country-icon{
+        width: 48px;
+        height: 48px;
+    }
+    
+
+    .gallery-img-bottom{ 
+        width:85%;
+        margin: 10px;
+    }
+
+    .review-left, .review-middle, .review-right{
+        display: flex;
+        flex-direction: column;
+    }
+    .purple-blocks{
+        display: flex;
+        flex-direction: column;
+    }
+    .check-country_top, .check-country_bottom{
+        margin: 0;
+        
+    }
+    .additional-purple-block{
+        width: 80%;
+    }
+    .button-popup-country,
+    .button-popup{
+        width: 266px;
+    }
+}

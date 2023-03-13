@@ -8,14 +8,13 @@ header{
     align-items: center;
     justify-content: space-between;
     background-color: #121786;
-    height: 146px;
-    padding: 0px 120px;
+    height: fit-content;
+    padding: 20px 10%;
+    max-width: 1920px;
 }
 
 .button-primary{
     width: fit-content;
-    left: 389px;
-    top: 0px;
     border-radius: 8px;
     padding: 16px 24px 16px 24px;
     font-family: Inter;
@@ -28,8 +27,12 @@ header{
     background-color: #FFFFFF;
 }
 
-h1{
-
+.close_popap button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
 }
 
 h2{
@@ -60,15 +63,6 @@ p{
     font-style: normal;
 }
 
-.img_wrap {
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    /*line-height: 200px;*/
-    /*text-align: center;*/
-    border-style: solid;
-}
-
 .nav{
     display: flex;
     flex-direction: row;
@@ -96,13 +90,16 @@ p{
     position: relative;
 }
 
+.img-wrapper img{
+    object-fit: fill;
+}
+
 .ontop_of_image{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    margin-top: 30px;
+    background-image: url(../images/bg-top.png);
     width: 100%;
     height: fit-content;
 }
@@ -110,6 +107,7 @@ p{
 .top_images{
     display: flex;
     justify-content: space-around;
+    margin-top: 5%;
 }
 
 .arrows{
@@ -132,27 +130,31 @@ p{
 .counties{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
 }
 
 .counties_top{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     margin-top: 60px;
+    width: 100%;
 }
 
 .counties_bottom{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
+    width: 100%;
 }
 
 .counties_top div{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px;
+    width: 250px;
 
     font-size: 32px;
     font-weight: 600;
@@ -167,6 +169,7 @@ p{
     flex-direction: row;
     align-items: center;
     margin-top: 40px;
+    width: 250px;
 
     font-size: 32px;
     font-weight: 600;
@@ -176,25 +179,10 @@ p{
     color: #FFFFFF;
 }
 
-.counties_top div p{
+.counties_top div p, .counties_bottom div p{
     margin: 15px;
 }
 
-.counties_bottom div p{
-    margin: 15px;
-}
-
-.chech{
-    margin-left: -140px;
-}
-
-.deutch{
-    margin-left: -50px;
-}
-
-.spain{
-    margin-right: -30px;
-}
 
 .top_phone-number{
     margin-top: 40px;
@@ -210,7 +198,13 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+
+}
+
+.bus-img img{
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
 }
 
 .second_section{
@@ -233,7 +227,7 @@ p{
 }
 
 .second_section_desc{
-    width: 1200px;
+    width: 80%;
     margin-top: 24px;
     font-size: 28px;
     font-weight: 400;
@@ -253,7 +247,8 @@ p{
 .check-country_top, .check-country_bottom{
     display: flex;
     flex-direction: row;
-    margin-bottom: -60px;
+    justify-content: center;
+    align-items: center;
 }
 
 .country-card{
@@ -262,7 +257,8 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px 20px -20px 0px;
+    margin: 0px 20px 0px;
+    margin-top: 20px;
 }
 
 .country-card-desc{
@@ -274,16 +270,15 @@ p{
 }
 
 .country-card-bg-img{
-    height: 412px;
-    width: 469px;
     border-radius: 8px;
-    
+    height: fit-content;
+    border-radius: 8px;
+    width: 100%;
 }
 
 .country-card-icon{
-    margin-top: 50px;
-    width: 120px;
-    height: 120px;
+    margin-top: 13%;
+    width: 30%;
 }
 
 .country-card-text{
@@ -298,11 +293,11 @@ p{
 }
 
 .country-card-button{
-    margin-top: 90px;
-    height: 66px;
-    width: 334px;
+    margin-top: 6%;
+    width: fit-content;
+    height: auto;
     border-radius: 8px;
-    padding: 16px 24px 16px 24px;
+    padding: 2% 3%;
     font-size: 25px;
     font-weight: 700;
     line-height: 34px;
@@ -319,40 +314,34 @@ p{
     display: flex;
     margin-top: 280px;
     margin-bottom: 200px;
-    position: relative;
     align-items: center;
-}
-
-.third_block img{
-    width: 100%;
+    background-image: url(../images/third-block-bg.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: fit-content;
+    padding: 10% 0%;
 }
 
 .third_block-desc{
-    position: absolute;
-    width: 90%;
-}
-
-.third_block_img{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-left: 10%;
+    width: 100%;
 }
 
-.third_block_text{
+.third_block-desc div{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 10px;
-    padding-left: 13%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 39px;
-    letter-spacing: 0em;
-    text-align: center;
+.third_block-desc div:nth-child(1) h3{
+    margin-top: 40px;
+}
 
-    color: #FFFFFF;
+.third_block-desc div svg{
+    margin: 10%;
 }
 
 .fourth_column{
@@ -377,16 +366,18 @@ p{
     align-items: center;
 }
 
-.how_we_work_top p, .how_we_work_bottom p{
-    width: 100%;
+.how_we_work_top div, .how_we_work_bottom div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .how_we_work_bottom p{
-    margin-right: 10%;
     font-size: 28px;
     font-weight: 400;
     line-height: 34px;
     letter-spacing: 0em;
-    text-align: center;
+    text-align: left;
+    width: 60%;
 }
 
 .how_we_work_bottom span{
@@ -394,17 +385,16 @@ p{
     font-weight: 700;
     line-height: 116px;
     letter-spacing: 0em;
-    text-align: center;
     color: #121786;
 }
 
 .how_we_work_top p{
-    margin-right: 10%;
     font-size: 28px;
     font-weight: 400;
     line-height: 34px;
     letter-spacing: 0em;
-    text-align: center;
+    text-align: left;
+    width: 60%;
 }
 
 .how_we_work_top span{
@@ -430,27 +420,33 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 50px;
+    margin-top: 125px;
+    width: 100%;
 }
 
 .gallery-top{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 125px;
-    
+    width: 100%;   
 }
-
-.gallery img{
-    margin-right: 15px;
-}
-
 .gallery-bottom{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     margin-top: 24px;
+    width: 100%;
+}
+
+.gallery-img-top{
+    width:20%;
+    margin: 5px;
+}
+
+.gallery-img-bottom{
+    width:30%;
+    margin: 5px;
 }
 
 .additional-help{
@@ -473,6 +469,8 @@ p{
 
 .purple-blocks{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .additional-purple-block{
@@ -511,6 +509,7 @@ p{
 .review-left,.review-middle,.review-right{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 33.3%;
 }
 
@@ -530,7 +529,7 @@ p{
     line-height: 34px;
     letter-spacing: 0em;
     text-align: center;
-    width: 600px;
+    width: 90%;
 }
 
 .other-reviews{
@@ -556,6 +555,7 @@ p{
     line-height: 39px;
     letter-spacing: 0em;
     text-align: left;
+    color: #121786;
 }
 
 .block-desc{
@@ -625,8 +625,22 @@ p{
     margin: 10px;
 }
 
+.contact-numbers div:nth-child(1) h2{
+    display: flex;
+    margin-left: 17px;
+}
+
 .contact-numbers div img{
     margin-right: 22px;
+}
+
+.contacts button{
+    margin: 100px 0px;
+}
+
+.country-card-icon{
+    width: 98px;
+    height: 98px;
 }
 
 footer{
@@ -635,7 +649,7 @@ footer{
     justify-content: space-between;
     align-items: center;
 
-    padding: 0px 245px;
+    padding: 0px 25%;
     height: 137px;
     background: #DBE5FF;
 }
@@ -661,27 +675,19 @@ footer p{
     display: block;
 }
 .overlay .flex-popap, .overlay2, .flex-popap2{
-    height: 100%;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .overlay .flex-popap .popap, .overlay2, .flex-popap2,.popap2 {
     position: relative;
-    background-color: #fff;  /* цвет фона всплывающего блока */
+    background-color: #fff;
     padding: 35px 25px;
     margin: 0 10px;
-    width: 1128px;
-    height: 727px;
+    width: 70%;
+    height: fit-content;
     overflow: auto;
-}
-.popap span, .popap2 span{
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
 }
 
 .popap, .popap2{
@@ -693,37 +699,35 @@ footer p{
 .data{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 60px;
-    margin-left: -280px;
+
 }
 
-.user-data{
+.user-data-top p, .user-data-bottom p{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 500px;
+
 }
 
-.user-data div p{
-    display: flex;
-    justify-content: start;
-    margin-right: 48px;
-}
-
-.user-data div input{
+.user-data_input{
     border-right: none;
     border-left: none;
     border-top: none;
     width: 358px;
     margin-right: 48px;
     margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin:15px;
 }
 
-.user-data div input:active{
-    border-right: none;
-    border-left: none;
-    border-top: none;
+.user-data_input:focus{
+    outline: none !important;
 }
 
 .popap h2{
@@ -735,27 +739,40 @@ footer p{
     margin-top: 50px;
     color: #121786;
 }
-
 .county-p{
-    width: 766px;
+    width: 80%;
+}
+.county-p div{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+.county-p div p{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    text-align: center;
 }
 
 .popup-desc{
     margin-top: 26px;
-    width: 766px;
+    width: 55%;
     height: fit-content;
 }
 
-.button-popup{
+.button-popup-country{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    margin-top: 90px;
+    margin-top: 30px;
+    margin-bottom: 100px;
     padding: 16px 24px;
     width: 766px;
-    height: 66px;
+    height: fit-content;
 
     /* blue */
 
@@ -771,6 +788,32 @@ footer p{
 
     color: #FFFFFF;
 
+}
+
+.button-popup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 140px;
+    padding: 16px 24px;
+    width: 766px;
+    height: fit-content;
+
+    /* blue */
+
+    background: #121786;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
 }
 
 .button-text{
@@ -791,9 +834,18 @@ footer p{
 
 .county-desc{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .county-desc img{
-    margin-right: 26px;
-    margin-left: -70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.county-desc h2{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
